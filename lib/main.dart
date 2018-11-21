@@ -38,6 +38,7 @@ class ColorFilterScreen extends StatelessWidget {
           color: color,
           blendMode: _blendModes[index],
           child: Container(
+            color: Colors.red,
             width: MediaQuery.of(context).size.width,
             height: 100.0,
             child: Center(
