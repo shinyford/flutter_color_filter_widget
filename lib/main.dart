@@ -30,7 +30,7 @@ class ColorFilterScreen extends StatelessWidget {
   BlendMode.screen, BlendMode.softLight, BlendMode.srcATop, BlendMode.srcIn, BlendMode.srcOut, BlendMode.srcOver,
   BlendMode.xor];
 
-  _buildListView() {
+  _buildListView(BuildContext context) {
     Color color = _colors[_random.nextInt(_colors.length)];
 
     return List.generate(_blendModes.length, (index) {
@@ -38,20 +38,11 @@ class ColorFilterScreen extends StatelessWidget {
           color: color,
           blendMode: _blendModes[index],
           child: Container(
-            margin: EdgeInsets.all(8.0),
-            height: 50.0,
-            width: 300.0,
-            child: Column(
-              children: <Widget>[
-                Container(
-                  color: Colors.blue,
-                  child: Text("Test"),
-                ),
-                Container(
-                  color: Colors.red,
-                  child: Text("Second test"),
-                )
-              ],
+            width: MediaQuery.of(context).size.width,
+            height: 100.0,
+            child: Center(
+              child: Text("Lorem ipsum dolor sit amet", style:
+                TextStyle(color: Colors.greenAccent),),
             ),
           ),
       );
@@ -65,8 +56,9 @@ class ColorFilterScreen extends StatelessWidget {
         title: Text("Color filter test"),
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
         child: ListView(
-          children: _buildListView(),
+          children: _buildListView(context),
         ),
       ),
     );
