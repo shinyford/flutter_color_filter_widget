@@ -44,7 +44,6 @@ class RenderColorFilter extends RenderProxyBox {
 
   set color(Color value) {
     assert(value != null);
-    print("setting color");
     if (_color == value)
       return;
     _color = value;
@@ -53,7 +52,6 @@ class RenderColorFilter extends RenderProxyBox {
 
   set blendMode(BlendMode value) {
     assert(value != null);
-    print("setting blendmode $value");
     if (_blendMode == value)
       return;
     _blendMode = value;
