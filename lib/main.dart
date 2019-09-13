@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
 
 class ColorFilterScreen extends StatelessWidget {
 
-  List _colors = [Colors.red, Colors.green, Colors.yellow, Colors.purple, Colors.orange];
-  Random _random = Random();
-  List _blendModes = [BlendMode.src, BlendMode.colorBurn, BlendMode.color, BlendMode.clear,
+  final List _colors = [Colors.red, Colors.green, Colors.yellow, Colors.purple, Colors.orange];
+  final Random _random = Random();
+  final List _blendModes = [BlendMode.src, BlendMode.colorBurn, BlendMode.color, BlendMode.clear,
     BlendMode.colorDodge, BlendMode.darken, BlendMode.difference, BlendMode.difference,
     BlendMode.dstATop, BlendMode.dst, BlendMode.dstIn, BlendMode.dstOut, BlendMode.dstOver,
     BlendMode.exclusion, BlendMode.hardLight, BlendMode.hue, BlendMode.lighten, BlendMode.luminosity,

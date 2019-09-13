@@ -79,7 +79,8 @@ class ColorFilterLayer extends ContainerLayer {
 
   @override
   ui.EngineLayer addToScene(ui.SceneBuilder builder, [Offset layerOffset = Offset.zero]) {
-    builder.pushColorFilter(color, blendMode);
+    final ColorFilter filter = ColorFilter.mode(color, blendMode);
+    builder.pushColorFilter(filter);
     addChildrenToScene(builder, layerOffset);
     builder.pop();
     return null; // this does not return an engine layer yet.
